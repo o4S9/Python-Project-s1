@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+ * {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}       
+#head {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+a{
+    float: right;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+a:hover{
+  border: 2px solid black;
+  box-shadow: rgb(37, 36, 36) 20px;
+}
+#sidebar{
+    width: 200px;
+    height: 500px;
+    background-color: antiquewhite;
+    float: left;
+}
+/* div{
+    width: 300px;
+    height: 500px;
+    display: inline-flex;
+    border: 2px solid black;
+    justify-content: center;
+
+} */
+div{
+    height: 100px;
+    width: 100px;
+    /* background-color: aquamarine;
+    border: 2px solid black; */
+    /* font-size: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    left: 125px;
+   
+    animation-name: colorAnimated;
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
+    animation-delay:1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes colorAnimated{
+    from{    rotate:y  0deg;}   
+    to{ rotate: y  360deg;}
+}
+
+
+    </style>
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    
+
+          <header id="head">
+            <a  href="/home">Home</a>
+            <a  href="/login">Login</a>
+            <a   href="/sign_up">Sign Up</a>
+          </header>
+
+          <div>Onkar Sutar</div>
+
+
+        
+         
+    
+</body>
+</html>
