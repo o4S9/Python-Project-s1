@@ -45,7 +45,8 @@ def signup():
             print(password1)
         else:
             print(email,firstName,password1)
-            return render_template('login.html')
+            return render_template('home.html')
+
 
             #add user database
             
