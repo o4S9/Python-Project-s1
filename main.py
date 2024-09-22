@@ -25,29 +25,26 @@ def login():
 
 @app.route('/sign_up',methods = ['GET','POST'])
 def signup():
-    data = request.form
-    print(data)
-    # if request.method == 'POST':
-    #     email = request.form.get('email')
-    #     firstName = request.form.get('firstName')
-    #     password1= request.form.get('password')
-    #     password2 = request.form.get('password1')
+    # data = request.form
+    # print(data)
+    if request.method == 'POST':
+        email = request.form.get('email')
+        firstName = request.form.get('firstName')
+        password1= request.form.get('password')
+        password2 = request.form.get('password1')
     
-    #     if len(email)=="onkarsutar4939@gmail.com":
-    #         print(email)
-    #     elif len(firstName)=="Onkar":
-    #         print(firstName)
+        if len(email)<5:
+            print(email)
+        elif len(firstName)<2:
+            print(firstName)
 
-    #     elif password1 == password2:
-    #         print(password1,password2)
+        elif email =="" or password1 == "":
+             return render_template('sign_up.html')
 
-    #     elif len(password1) == "1234":
-    #         print(password1)
-        # elif email =="Onkar" or password1 == "4939":
-        #     print(email,firstName,password1)
-        # else:
-        #     render_template('home.html')
-
+        elif len(password1)<8:
+            print(password1)
+        else:
+            print(email,firstName,password1)
             #add user database
             
 
