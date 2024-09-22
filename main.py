@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
   
-
+ 
 
 @app.route('/')
 def index():
@@ -45,6 +45,8 @@ def signup():
             print(password1)
         else:
             print(email,firstName,password1)
+            return render_template('login.html')
+
             #add user database
             
 
